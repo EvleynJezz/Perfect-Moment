@@ -1,14 +1,207 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Colegio de Bachilleres de Estado de Mexico </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Ritmo Urbano</title>
+
+    <style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #0f172a;
+        font-family: Arial, sans-serif;
+    }
+
+    /* CONTENEDOR */
+    #contenedor {
+        width: 90%;
+        max-width: 1200px;
+        margin: 2rem auto;
+        background: #111827;
+        border-radius: 20px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+
+    /* HEADER */
+    header {
+        background: linear-gradient(135deg, #9333ea, #ec4899);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    header p {
+        font-style: italic;
+        color: #fbcfe8;
+    }
+
+    /* ===== MENÚ ===== */
+    .navbar {
+        background-color: #1e293b;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li a {
+        display: block;
+        color: #e0e7ff;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* 🔥 HOVER */
+    .menu li a:hover {
+        background-color: #9333ea;
+        color: #ffffff;
+        transition: 0.3s;
+        border-radius: 8px;
+    }
+
+    /* ICONO */
+    .icon {
+        display: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* SECTION */
+    section {
+        background: #020617;
+        padding: 1.5rem;
+        overflow: hidden;
+    }
+
+    article {
+        float: left;
+        width: 68%;
+        background: #2563eb;
+        color: white;
+        border-radius: 15px;
+        padding: 1rem;
+    }
+
+    article h2 {
+        color: #e0e7ff;
+    }
+
+    aside {
+        float: right;
+        width: 28%;
+        background: #ec4899;
+        color: white;
+        border-radius: 15px;
+        padding: 1rem;
+    }
+
+    footer {
+        background: #020617;
+        color: #cbd5f5;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* 📱 RESPONSIVE */
+    @media screen and (max-width: 768px) {
+        article, aside {
+            width: 100%;
+            float: none;
+            margin-bottom: 1rem;
+        }
+    }
+
+    /* MENÚ RESPONSIVE */
+    @media screen and (max-width: 600px) {
+        .menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .icon {
+            display: block;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+        .menu li a {
+            padding: 12px;
+            border-top: 1px solid #334155;
+        }
+    }
+    </style>
 </head>
+
 <body>
-    <p> <b>¡BIENVENIDO!</b></p>
-    <p> Esta es la página del plantel <b></b> 03 </p>
-    <p>Aquí recibirás los conocimientos esenciales para tu vida <i>laboral</i> o <i>universitaria</i></p>
-    <p><b>Elaborado por:</b> Rosas Serrano Evelyn Jezabel</p>
+
+<div id="contenedor">
+
+    <header>
+        <h1>💃 Perfect Moment </h1>
+        <p>Clases de salsa, bachata, hip-hop y baile moderno</p>
+    </header>
+
+    <!-- MENÚ -->
+  <nav class="navbar">
+    <span class="icon" onclick="toggleMenu()">&#9776;</span>
+
+    <ul class="menu" id="menu">
+        <li><a href="Práctica 5 Menú/index.html">INICIO</a></li>
+        <li><a href="Práctica 5 Menú/productos.html">Clases</a></li>
+        <li><a href="Práctica 5 Menú/contactos.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<section>
+
+        <article>
+            <h2>Nuestras clases</h2>
+            <p>Aprende a bailar con instructores profesionales en diferentes estilos.</p>
+            <p><strong>Ofrecemos:</strong> Salsa, Bachata, Hip-Hop y baile moderno.</p>
+            <p>Horarios: Lunes a viernes de 5:00 pm a 9:00 pm.</p>
+        </article>
+
+        <aside>
+            <h3>Promoción</h3>
+            <p>Primera clase GRATIS</p>
+            <p>Descuento en inscripción este mes</p>
+        </aside>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Academia Ritmo Urbano</p>
+    </footer>
+
+</div>
+
+<!-- JS para menú hamburguesa -->
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
-              
